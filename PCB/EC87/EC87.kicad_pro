@@ -402,7 +402,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "EC87.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -453,6 +453,10 @@
     [
       "d1422f38-9fce-4f5e-878a-341530beaf9c",
       "matrix"
+    ],
+    [
+      "a044e21d-edf5-4199-9c94-8aa40ba0be53",
+      "analog"
     ]
   ],
   "text_variables": {}
