@@ -3334,6 +3334,18 @@
     (path "/d1422f38-9fce-4f5e-878a-341530beaf9c/0dd0e640-baca-4a68-85df-c1f349379656"
       (reference "SW88") (unit 1) (value "EC_SW") (footprint "cipulot_parts:ecs_pad")
     )
+    (path "/d1422f38-9fce-4f5e-878a-341530beaf9c/123b59c7-6cec-44ba-bbcc-2c8d049fd785"
+      (reference "SW?") (unit 1) (value "EC_SW") (footprint "cipulot_parts:ecs_pad")
+    )
+    (path "/d1422f38-9fce-4f5e-878a-341530beaf9c/957b0997-273c-4207-b882-1c8a6699bef3"
+      (reference "SW?") (unit 1) (value "EC_SW") (footprint "cipulot_parts:ecs_pad")
+    )
+    (path "/d1422f38-9fce-4f5e-878a-341530beaf9c/97d9247c-a119-4461-b0c3-5af09cef93ab"
+      (reference "SW?") (unit 1) (value "EC_SW") (footprint "cipulot_parts:ecs_pad")
+    )
+    (path "/d1422f38-9fce-4f5e-878a-341530beaf9c/aa5abb0b-a1bf-4c32-aa1a-3c3fa7fcfd10"
+      (reference "SW?") (unit 1) (value "EC_SW") (footprint "cipulot_parts:ecs_pad")
+    )
     (path "/2eb83bbd-e380-44b3-a287-6b2b1b90d7c6"
       (reference "U1") (unit 1) (value "ATmega32U4-A") (footprint "Package_QFP:TQFP-44_10x10mm_P0.8mm")
     )
