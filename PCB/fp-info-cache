@@ -1,4 +1,4 @@
-20715010251809494
+20721600265895645
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -84728,6 +84728,27 @@ ATMEGA32U4-AU
 44
 44
 cipulot_parts
+Amphenol_10051922-1210ELF
+
+
+0
+14
+13
+cipulot_parts
+Amphenol_10051922-1610ELF
+
+
+0
+18
+17
+cipulot_parts
+Amphenol_10051922-1810ELF
+
+
+0
+20
+19
+cipulot_parts
 ArduinoProMicro
 
 
@@ -88283,6 +88304,13 @@ ecs_pad_4port
 0
 5
 3
+cipulot_parts
+mouse-bite-1mm-slot
+
+
+0
+0
+0
 cipulot_parts
 qmk_logo
 
