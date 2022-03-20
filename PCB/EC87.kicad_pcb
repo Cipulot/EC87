@@ -27194,7 +27194,6 @@
     )
   )
 
-  (gr_rect (start 36.11625 83.54) (end 390.12625 204.54) (layer "B.Cu") (width 0.15) (fill none) (tstamp 8e90ebfb-6ae0-4e88-83bc-832d062f87bc))
   (gr_line (start 38.11625 83.53625) (end 321.51625 83.536249) (layer "Edge.Cuts") (width 0.1) (tstamp 014bb46b-dc51-49e2-b018-18e3f83603cc))
   (gr_line (start 332.16625 78.361249) (end 332.16625 82.986249) (layer "Edge.Cuts") (width 0.1) (tstamp 12014cd1-eba9-4eaf-8f54-a12ef6b4c1a2))
   (gr_arc (start 36.11625 85.53625) (mid 36.702036 84.122036) (end 38.11625 83.53625) (layer "Edge.Cuts") (width 0.1) (tstamp 1df358eb-2ddc-4a98-9831-a0ea91eb1ae5))
