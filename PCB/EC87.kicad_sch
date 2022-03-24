@@ -3207,6 +3207,30 @@
     (path "/6faa5065-e25e-4a0a-b4ee-4fc221f4a292"
       (reference "#PWR042") (unit 1) (value "GND") (footprint "")
     )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/594930f1-e293-46b0-acd1-9b54a30140d1"
+      (reference "#PWR043") (unit 1) (value "VCC") (footprint "")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/1e07e607-5306-4393-a7a5-ca44acac58f4"
+      (reference "#PWR044") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/10f32276-5b58-4bf9-b6cb-256c00b419d7"
+      (reference "#PWR045") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/b7337113-9b2c-4ea0-928f-49e3ec7ba155"
+      (reference "#PWR046") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/b4503011-f7dd-4ec7-99db-69f75729fa55"
+      (reference "#PWR047") (unit 1) (value "VCC") (footprint "")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/560c52e9-bce4-4b9e-99ae-f5412b8463f5"
+      (reference "#PWR048") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/27a857db-33dd-4fc2-82d1-452b570faff1"
+      (reference "#PWR049") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/d944bb2b-4641-4332-a1ce-f491aac8e3c2"
+      (reference "#PWR050") (unit 1) (value "GND") (footprint "")
+    )
     (path "/760ee12d-a9e5-4ee9-950e-e0bfd7c0cb9c"
       (reference "C1") (unit 1) (value "4.7u") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
@@ -3230,6 +3254,18 @@
     )
     (path "/c50dc4d6-2c42-41ee-a5ff-9fcb791204d7"
       (reference "C8") (unit 1) (value "1u") (footprint "Capacitor_SMD:C_0603_1608Metric")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/dfc40f91-a734-4293-bf46-99478e8cc1b1"
+      (reference "C9") (unit 1) (value "0.1u") (footprint "cipulot_parts:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/4ea17c7e-e3e8-444a-8772-7da08997798e"
+      (reference "C10") (unit 1) (value "220p") (footprint "cipulot_parts:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/a685766f-022d-4247-b1ef-1c20b2c1656f"
+      (reference "C11") (unit 1) (value "0.1u") (footprint "cipulot_parts:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/ee478bc0-da8d-4f37-ab0e-592b6b332438"
+      (reference "C12") (unit 1) (value "220p") (footprint "cipulot_parts:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
     (path "/bcaf65d5-5097-476a-97cf-ca07ca776a64"
       (reference "D1") (unit 1) (value "PRTR5V0U2X") (footprint "Package_TO_SOT_SMD:SOT-143")
@@ -3263,6 +3299,54 @@
     )
     (path "/651fd16f-6e11-45d1-880d-c9ced42f88a1"
       (reference "R8") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0805_2012Metric")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/396a4260-a2a2-4915-8e46-e45b012de968"
+      (reference "R9") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/0f4e4efe-dbfd-4d8e-846f-b5579e1bec3c"
+      (reference "R10") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/964742c0-ee94-4927-91df-9434b273df16"
+      (reference "R11") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/4d5b9e80-6f31-4685-9cf8-a5b9368c8ed0"
+      (reference "R12") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/ffc4c81d-43da-4c7e-9e8a-6d97b9020ba5"
+      (reference "R13") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/34fd4f0d-8a0e-4c87-9735-a2f8fb0669c5"
+      (reference "R14") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/58e0b45e-f213-4152-9f59-435178d20c89"
+      (reference "R15") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/6b7e6623-df01-4904-a8bd-1e718d9e95e0"
+      (reference "R16") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/06f49a2d-851a-48c2-a3b6-35f6f883e714"
+      (reference "R17") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/8ae422bd-0299-4862-a13c-7618589a88c0"
+      (reference "R18") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/84159df1-2a43-4894-9f71-67dad2a59905"
+      (reference "R19") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/eeb801ab-9ccd-4017-8bc6-d48aeb3a7c55"
+      (reference "R20") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/5121b1cc-3035-4bfa-8e41-405fff6322ae"
+      (reference "R21") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/1dc8fb8d-eed9-47f9-8b26-c5b1f3925741"
+      (reference "R22") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/efa8aba9-dc94-4a61-8b50-74a63e55d844"
+      (reference "R23") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/3a0f9b93-3685-4619-ae82-0d350861afcc"
+      (reference "R24") (unit 1) (value "100k") (footprint "cipulot_parts:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/ae6eadf6-a268-4c7c-a042-bdafe273accd"
       (reference "SW1") (unit 1) (value "BOOT0") (footprint "cipulot_parts:Jumper-UserFriendly")
@@ -3533,6 +3617,12 @@
     )
     (path "/53be9e8f-6875-4725-93c2-3b01d3698cab"
       (reference "U1") (unit 1) (value "STM32F411CEUx") (footprint "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/08ea73d9-b82c-41dc-bb2a-d12314dfd682"
+      (reference "U2") (unit 1) (value "74HC4051") (footprint "cipulot_parts:TSSOP16")
+    )
+    (path "/a044e21d-edf5-4199-9c94-8aa40ba0be53/4616e2f5-f3e8-4df3-afee-e4540df01141"
+      (reference "U3") (unit 1) (value "74HC4051") (footprint "cipulot_parts:TSSOP16")
     )
     (path "/9e4fb448-6006-469d-b6fe-9e739a8f0701"
       (reference "USB1") (unit 1) (value "HRO-TYPE-C-31-M-12") (footprint "cipulot_parts:HRO-TYPE-C-31-M-12-Assembly")
