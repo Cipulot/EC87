@@ -23,6 +23,6 @@ void keyboard_post_init_kb() {
 
 void keyboard_pre_init_kb(void) {
     // Turn on extern circuit
-    setPinOutput(POWER_PIN);
-    writePinHigh(POWER_PIN);
+    //setPinOutput(POWER_PIN);
+    //writePinHigh(POWER_PIN);
 }

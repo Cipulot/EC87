@@ -25,20 +25,20 @@
 #define DESCRIPTION     Capacitive TKL keyboard
 
 /* key matrix size */
-#define MATRIX_ROWS 3
-#define MATRIX_COLS 14
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 16
 
-#define POWER_PIN B12
-#define APLEX_EN_PIN_0 B13
-#define APLEX_EN_PIN_1 B14
+//#define POWER_PIN B12
+#define APLEX_EN_PIN_0 A8
+#define APLEX_EN_PIN_1 B7
 //#define OPA_SHDN_PIN B14
-#define DISCHARGE_PIN B15
-#define ANALOG_PORT_0 A0
-#define ANALOG_PORT_1 A1
+#define DISCHARGE_PIN A5
+#define ANALOG_PORT_0 A2
+//#define ANALOG_PORT_1 A1
 
-#define MATRIX_ROW_PINS { A15, B3, B4 }
-#define MATRIX_COL_CHANNELS { 6, 4, 3, 0, 1, 2, 5 }
-#define MUX_SEL_PINS { B8, B9, C13 }
+#define MATRIX_ROW_PINS { B4, A14, A15, B3, B4, B5, B6 }
+#define MATRIX_COL_CHANNELS { 6, 4, 3, 0, 1, 2, 5, 7}
+#define MUX_SEL_PINS { B0, A7, A6 }
 
 #define UNUSED_PINS
 

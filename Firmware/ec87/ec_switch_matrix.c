@@ -97,6 +97,8 @@ int ecsm_init(ecsm_config_t const* const ecsm_config) {
     // Enable AMUX
     setPinOutput(APLEX_EN_PIN_0);
     writePinLow(APLEX_EN_PIN_0);
+    setPinOutput(APLEX_EN_PIN_1);
+    writePinLow(APLEX_EN_PIN_1);
 
     return 0;
 }
@@ -127,12 +129,13 @@ static uint16_t ecsm_readkey_raw(uint8_t channel, uint8_t row, uint8_t col) {
         charge_capacitor(row);
 
         WAIT_CHARGE();
-
+        /*
         if(channel == 0) {
-            sw_value = analogReadPin(ANALOG_PORT_0);;
+            sw_value = analogReadPin(ANALOG_PORT_0);
         } else {
             sw_value = analogReadPin(ANALOG_PORT_1);
-        }
+        }*/
+        sw_value = analogReadPin(ANALOG_PORT_0);
     }
     //chSysUnlock();
 
@@ -163,6 +166,9 @@ bool ecsm_matrix_scan(matrix_row_t current_matrix[]) {
     bool updated = false;
 
     //COL 0 to COL sizeof(col_channels)
+
+    //Disable AMUX of channel 1
+    writePinHigh(APLEX_EN_PIN_1);
     for (int col = 0; col < sizeof(col_channels); col++) {
         //for (int row = 0; row < sizeof(row_pins); row++) {
         for (int row = 0; row < 3; row++) {
@@ -173,6 +179,9 @@ bool ecsm_matrix_scan(matrix_row_t current_matrix[]) {
 
     //COL sizeof(col_channels) + 1 to COL (sizeof(col_channels) + 1) + sizeof(col_channels)
     //Since row are shared simply shift + 8. For loop is the same since it's shared code to select the columns, in the ecsm_readkey_raw function. Shift + 8 the reading in the reading matrix to get the correct column.
+
+    //Disable AMUX of channel 1
+    writePinHigh(APLEX_EN_PIN_0);
     for (int col = 0; col < sizeof(col_channels); col++) {
         //for (int row = 0; row < sizeof(row_pins); row++) {
         for (int row = 0; row < 3; row++) {
