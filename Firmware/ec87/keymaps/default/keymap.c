@@ -17,6 +17,9 @@
 #include QMK_KEYBOARD_H
 
 #include "ec_switch_matrix.h"
+#include "timer.h"
+
+enum custom_keycodes { DOUBLE_0 = SAFE_RANGE };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_all(
@@ -32,10 +35,54 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,    KC_TRNS,  KC_TRNS,  KC_TRNS,
     KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,    KC_TRNS,  KC_TRNS,  KC_TRNS,
     KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
-    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,                                     KC_TRNS,
-    KC_TRNS,  KC_TRNS,  KC_TRNS,                  KC_SPC,                           KC_TRNS,  KC_APP,   KC_TRNS,  KC_TRNS,                        KC_KB_MUTE,  KC_KB_VOLUME_DOWN,  KC_KB_VOLUME_UP)
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,                                   KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,                  KC_TRNS,                           KC_TRNS, KC_APP,   KC_TRNS,  KC_TRNS,                        KC_MUTE,  KC_VOLD,  KC_VOLU),
+
+    [2] = LAYOUT_all(
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,              KC_TRNS,  KC_TRNS,  KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,    KC_TRNS,  KC_TRNS,  KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,    KC_TRNS,  KC_TRNS,  KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,                                  KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,                  KC_TRNS,                           KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,                       KC_TRNS,  KC_TRNS,  KC_TRNS),
+
+    [3] = LAYOUT_all(
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,              KC_TRNS,  KC_TRNS,  KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_P7,    KC_P8,    KC_P9,    KC_TRNS,  KC_PMNS,  KC_TRNS,  KC_TRNS,    KC_TRNS,  KC_TRNS,  KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_P4,    KC_P5,    KC_P6,    KC_TRNS,  KC_PENT,  KC_TRNS,  KC_TRNS,    KC_TRNS,  KC_TRNS,  KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_P1,    KC_P2,    KC_P3,    KC_PPLS,  KC_PAST,  KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_P0,    DOUBLE_0, KC_PDOT,  KC_PSLS,  KC_TRNS,                                  KC_TRNS,
+    KC_TRNS,  KC_TRNS,  KC_TRNS,                  KC_TRNS,                         KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,                        KC_TRNS,  KC_TRNS,  KC_TRNS)
 };
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) { return true; }
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case DOUBLE_0:
+            if (record->event.pressed) {
+                tap_code(KC_P0);
+                wait_ms(3);
+                tap_code(KC_P0);
+            }
+            break;
+    }
+    return true;
+}
 
-void keyboard_post_init_user() { layer_state_set_user(layer_state); }
+void keyboard_post_init_user() {
+    layer_state_set_user(layer_state);
+}
+
+static uint8_t old_usb_led = 0; // 0 = off, 2 = on
+void led_set_user(uint8_t usb_led) {
+    wait_ms(10);
+
+    if ((usb_led & (1 << USB_LED_NUM_LOCK)) && !(old_usb_led & (1 << USB_LED_NUM_LOCK))) {
+        // If CAPS LK LED is turning on...
+        layer_on(3);
+    } else if (!(usb_led & (1 << USB_LED_NUM_LOCK)) && (old_usb_led & (1 << USB_LED_NUM_LOCK))) {
+        // If CAPS LK LED is turning off...
+        layer_off(3);
+    }
+
+    old_usb_led = usb_led;
+}
