@@ -44,7 +44,7 @@ static inline void charge_capacitor(uint8_t row) {
 
 static inline void clear_all_row_pins(void) {
     //for (int row = 0; row < sizeof(row_pins); row++) {
-    for (int row = 0; row < 3; row++) {
+    for (int row = 0; row < 6; row++) {
         writePinLow(row_pins[row]);
     }
 }
@@ -66,7 +66,7 @@ static inline void select_mux(uint8_t col) {
 
 static inline void init_row(void) {
     //for (int idx = 0; idx < sizeof(row_pins); idx++) {
-    for (int idx = 0; idx < 3; idx++) {
+    for (int idx = 0; idx < 6; idx++) {
         setPinOutput(row_pins[idx]);
         writePinLow(row_pins[idx]);
     }
@@ -171,7 +171,7 @@ bool ecsm_matrix_scan(matrix_row_t current_matrix[]) {
     writePinHigh(APLEX_EN_PIN_1);
     for (int col = 0; col < sizeof(col_channels); col++) {
         //for (int row = 0; row < sizeof(row_pins); row++) {
-        for (int row = 0; row < 3; row++) {
+        for (int row = 0; row < 6; row++) {
             ecsm_sw_value[row][col] = ecsm_readkey_raw(0, row, col);
             updated |= ecsm_update_key(&current_matrix[row], col, ecsm_sw_value[row][col]);
         }
@@ -184,9 +184,9 @@ bool ecsm_matrix_scan(matrix_row_t current_matrix[]) {
     writePinHigh(APLEX_EN_PIN_0);
     for (int col = 0; col < sizeof(col_channels); col++) {
         //for (int row = 0; row < sizeof(row_pins); row++) {
-        for (int row = 0; row < 3; row++) {
-            ecsm_sw_value[row][col+7] = ecsm_readkey_raw(1, row, col);
-            updated |= ecsm_update_key(&current_matrix[row], col+7, ecsm_sw_value[row][col+7]);
+        for (int row = 0; row < 6; row++) {
+            ecsm_sw_value[row][col+8] = ecsm_readkey_raw(1, row, col);
+            updated |= ecsm_update_key(&current_matrix[row], col+8, ecsm_sw_value[row][col+8]);
         }
     }
     return updated;
@@ -195,7 +195,7 @@ bool ecsm_matrix_scan(matrix_row_t current_matrix[]) {
 // Debug print key values
 void ecsm_dprint_matrix(void) {
     //for (int row = 0; row < sizeof(row_pins); row++) {
-    for (int row = 0; row < 3; row++) {
+    for (int row = 0; row < 6; row++) {
         for (int col = 0; col < sizeof(col_channels); col++) {
             dprintf("%4d", ecsm_sw_value[row][col]);
             if (col < sizeof(col_channels) - 1) {

@@ -36,7 +36,7 @@
 #define ANALOG_PORT_0 A2
 //#define ANALOG_PORT_1 A1
 
-#define MATRIX_ROW_PINS { B4, A14, A15, B3, B4, B5, B6 }
+#define MATRIX_ROW_PINS { B4, A14, A15, B3, B5, B6 }
 #define MATRIX_COL_CHANNELS { 6, 4, 3, 0, 1, 2, 5, 7}
 #define MUX_SEL_PINS { B0, A7, A6 }
 
