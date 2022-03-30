@@ -5,6 +5,14 @@
   )
 
   (paper "A3")
+  (title_block
+    (title "EC87")
+    (date "2022-03-30")
+    (rev "1")
+    (company "Cipulot's PCB Design")
+    (comment 2 "Cipulot")
+  )
+
   (layers
     (0 "F.Cu" signal)
     (31 "B.Cu" signal)

@@ -2,7 +2,14 @@
 
   (uuid d7453f44-321c-4050-b18b-a12237a10415)
 
-  (paper "A3")
+  (paper "A4")
+
+  (title_block
+    (title "EC87")
+    (date "2022-03-30")
+    (rev "1")
+    (company "Cipulot's PCB Design ")
+  )
 
   (lib_symbols
     (symbol "cipulot_parts:EC_SW" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)

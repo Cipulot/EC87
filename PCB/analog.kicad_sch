@@ -4,6 +4,13 @@
 
   (paper "A4")
 
+  (title_block
+    (title "EC87")
+    (date "2022-03-30")
+    (rev "1")
+    (company "Cipulot's PCB Design ")
+  )
+
   (lib_symbols
     (symbol "74xx:74HC4051" (in_bom yes) (on_board yes)
       (property "Reference" "U" (id 0) (at -5.08 11.43 0)

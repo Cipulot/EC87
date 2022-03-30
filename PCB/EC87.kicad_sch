@@ -4,6 +4,14 @@
 
   (paper "A4")
 
+  (title_block
+    (title "EC87")
+    (date "2022-03-30")
+    (rev "1")
+    (company "Cipulot's PCB Design ")
+    (comment 2 "Cipulot")
+  )
+
   (lib_symbols
     (symbol "Connector_Generic:Conn_01x04" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "J" (id 0) (at 0 5.08 0)
@@ -1182,7 +1190,7 @@
   (no_connect (at 33.02 44.45) (uuid 8b55ee15-4189-4d13-9713-e485aec3a102))
   (no_connect (at 33.02 29.21) (uuid 8b55ee15-4189-4d13-9713-e485aec3a103))
   (no_connect (at 83.82 107.95) (uuid 9fa95695-028d-49e5-b6f4-7e3b558d3e99))
-  (no_connect (at 116.84 110.49) (uuid 9fa95695-028d-49e5-b6f4-7e3b558d3e99))
+  (no_connect (at 116.84 110.49) (uuid 9fa95695-028d-49e5-b6f4-7e3b558d3e9a))
   (no_connect (at 83.82 95.25) (uuid cc859f20-008c-4ffb-acb6-ed6f4a95791d))
   (no_connect (at 83.82 97.79) (uuid cc859f20-008c-4ffb-acb6-ed6f4a95791e))
   (no_connect (at 83.82 100.33) (uuid cc859f20-008c-4ffb-acb6-ed6f4a95791f))
@@ -2666,7 +2674,7 @@
     (pin "36" (uuid 48fe5938-a0a4-4112-be3b-f306af368494))
     (pin "37" (uuid cedd5088-c3d2-4fa3-949b-66b72f6ad025))
     (pin "38" (uuid 8d13ce00-4272-48f8-859f-56605330801a))
-    (pin "39" (uuid fd3b4b39-129b-4780-adf2-6fedeb400468))
+    (pin "39" (uuid fd3b4b39-129b-4780-adf2-6fedeb400469))
     (pin "4" (uuid 8b0a555d-f6b0-4c45-9b4e-efe1c39823d6))
     (pin "40" (uuid 4171771a-aa1a-486c-bd86-020698dc2fe4))
     (pin "41" (uuid 4a57f806-0374-473d-9538-f92852a0dee7))
