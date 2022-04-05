@@ -1,4 +1,4 @@
-20729844401829444
+20731493087522168
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -88317,6 +88317,13 @@ ecs_pad_4port
 
 0
 5
+3
+cipulot_parts
+ecs_pad_triple
+ StepUp generated footprint
+
+0
+4
 3
 cipulot_parts
 mouse-bite-1mm-slot

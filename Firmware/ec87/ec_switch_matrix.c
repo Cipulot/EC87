@@ -32,7 +32,7 @@ const uint32_t mux_sel_pins[] = MUX_SEL_PINS;
 //_Static_assert(sizeof(mux_sel_pins) == 3, "invalid MUX_SEL_PINS");
 
 static ecsm_config_t config;
-static uint16_t      ecsm_sw_value[MATRIX_ROWS][MATRIX_COLS];
+static uint16_t ecsm_sw_value[MATRIX_ROWS][MATRIX_COLS];
 
 static inline void discharge_capacitor(void) {
     setPinOutput(DISCHARGE_PIN);
