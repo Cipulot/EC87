@@ -10,7 +10,7 @@ Below is the KLE of the supported layout:
 
 ![EC87 KLE](/Docs/images/EC87_KLE.jpg)
 
-Multi layout support is planned for Rev2
+Multi layout support is planned for Rev2.
 
 ## Technical information
 
