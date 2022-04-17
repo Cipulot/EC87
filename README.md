@@ -16,7 +16,6 @@ Multi layout support is planned for Rev2.
 
 - Layout size: tenkeykess (TKL)
 - Compatible switches: EC switches (Topre and NIZ)
-- Lighting: single colors per-key through-hole LEDs, RGB underglow
 - Microcontroller: STM32F411
 - Connector: detachable USB Type C
 - Firmware compatibility: QMK (with VIA/VIAL support)
