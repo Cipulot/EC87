@@ -25,9 +25,9 @@ Multi layout support is planned for Rev2.
 
 ## Renders
 
-### EC87 PCB
+### EC87 PCB and Prototypes
 
-#### Render and Prototypes
+#### Render
 
 ![EC87 PCB Top Render](/Docs/images/top.jpg)
 
