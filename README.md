@@ -23,9 +23,9 @@ Multi layout support is planned for Rev2.
   * Fused
   * ESD protection
 
-## Renders
+## Renders and Prototypes
 
-### EC87 PCB and Prototypes
+### EC87 PCB 
 
 #### Render
 
@@ -41,9 +41,13 @@ Multi layout support is planned for Rev2.
 
 ### Plate
 
+#### Render
+
 ![EC87 Plate Render](/Docs/images/plate.jpg)
 
 ### Backplate
+
+#### Render
 
 ![EC87 Backplate Render](/Docs/images/backplate.jpg)
 
