@@ -19,7 +19,7 @@
 #include "quantum.h"
 #include "analog.h"
 #include "atomic_util.h"
-#include "debug.h"
+#include "print.h"
 
 #define WAIT_DISCHARGE()
 #define WAIT_CHARGE()
@@ -34,9 +34,7 @@ const uint32_t mux_sel_pins[] = MUX_SEL_PINS;
 static ecsm_config_t config;
 static uint16_t      ecsm_sw_value[MATRIX_ROWS][MATRIX_COLS];
 
-static inline void discharge_capacitor(void) {
-    setPinOutput(DISCHARGE_PIN);
-}
+static inline void discharge_capacitor(void) { setPinOutput(DISCHARGE_PIN); }
 static inline void charge_capacitor(uint8_t row) {
     setPinInput(DISCHARGE_PIN);
     writePinHigh(row_pins[row]);
@@ -173,16 +171,15 @@ bool ecsm_matrix_scan(matrix_row_t current_matrix[]) {
 }
 
 // Debug print key values
-void ecsm_dprint_matrix(void) {
+void ecsm_print_matrix(void) {
     for (int row = 0; row < 6; row++) {
-        for (int col = 0; col < sizeof(col_channels); col++) {
-            dprintf("%4d", ecsm_sw_value[row][col]);
-            if (col < sizeof(col_channels) - 1) {
-                dprintf(",");
+        for (int col = 0; col < 16; col++) {
+            uprintf("%4d", ecsm_sw_value[row][col]);
+            if (col < 15) {
+                print(",");
             }
         }
-        dprintf("\n");
+        print("\n");
     }
-    dprintf("\n");
-    // dprintf("%d,%d,%d,%d,%d\n", ecsm_sw_value[0][0], ecsm_sw_value[0][1], ecsm_sw_value[0][2], ecsm_sw_value[0][3],ecsm_sw_value[1][1]);
+    print("\n");
 }

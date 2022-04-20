@@ -19,11 +19,11 @@
 #include "debug.h"
 
 #ifndef LOW_THRESHOLD
-#    define LOW_THRESHOLD 750
+#    define LOW_THRESHOLD 550
 #endif
 
 #ifndef HIGH_THRESHOLD
-#    define HIGH_THRESHOLD 800
+#    define HIGH_THRESHOLD 650
 #endif
 
 
@@ -40,50 +40,15 @@ void matrix_init_custom(void) {
 
 bool matrix_scan_custom(matrix_row_t current_matrix[]) {
     bool updated = ecsm_matrix_scan(current_matrix);
+
+// RAW matrix values on console
+#ifdef CONSOLE_ENABLE
+    static int cnt = 0;
+    if (cnt++ == 300) {
+        cnt = 0;
+        ecsm_print_matrix();
+    }
+#endif
+
     return updated;
 }
-
-/*
-bool matrix_after_scan(void) {
-    bool changed = false;
-    if (is_keyboard_master()) {
-        static uint8_t error_count;
-
-        matrix_row_t slave_matrix[ROWS_PER_HAND] = {0};
-        if (!transport_master(matrix + thatHand, slave_matrix)) {
-            error_count++;
-
-            if (error_count > ERROR_DISCONNECT_COUNT) {
-                // reset other half if disconnected
-                dprintf("Error: disconnect split half\n");
-                for (int i = 0; i < ROWS_PER_HAND; ++i) {
-                    matrix[thatHand + i] = 0;
-                    slave_matrix[i]      = 0;
-                }
-
-                changed = true;
-            }
-        } else {
-            error_count = 0;
-
-            for (int i = 0; i < ROWS_PER_HAND; ++i) {
-                if (matrix[thatHand + i] != slave_matrix[i]) {
-                    matrix[thatHand + i] = slave_matrix[i];
-                    changed              = true;
-                }
-            }
-        }
-
-        matrix_scan_quantum();
-    }
-    return changed;
-}
-
-uint8_t matrix_scan(void) {
-    bool changed = matrix_scan_custom(raw_matrix) || matrix_after_scan();
-
-    debounce(raw_matrix, matrix + thisHand, ROWS_PER_HAND, changed);
-
-    return changed;
-}
-*/

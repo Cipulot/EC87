@@ -18,11 +18,6 @@
 
 void keyboard_post_init_kb() {
     keyboard_post_init_user();
-    debug_enable = true;
-}
-
-void keyboard_pre_init_kb(void) {
-    // Turn on extern circuit
-    //setPinOutput(POWER_PIN);
-    //writePinHigh(POWER_PIN);
+    //debug_enable = true;
+    //debug_matrix = true;
 }
