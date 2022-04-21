@@ -31,9 +31,32 @@
 extern matrix_row_t raw_matrix[MATRIX_ROWS];  // raw values
 extern matrix_row_t matrix[MATRIX_ROWS];      // debounced values
 
+const uint16_t low_threshold[MATRIX_ROWS][MATRIX_COLS] = {
+    { 800,  800,  800,  800,  800, 800,  800, 800, 800,  800,  800,  800,  800,  800, 800, 800 }, \
+    { 800,  800,  800,  800,  800, 800,  800, 800, 800,  800,  800,  800,  800,  800, 800, 800 }, \
+    { 800,  800,  800,  800,  800, 800,  800, 800, 800,  800,  800,  800,  800,  800, 800, 800 }, \
+    { 800,  800,  800,  800,  800, 800,  800, 800, 800,  800,  800,  800,  800,  800, 800, 800 }, \
+    { 800,  800,  800,  800,  800, 800,  800, 800, 800,  800,  800,  800,  800,  800, 800, 800 }, \
+    { 800,  800,  800,  800,  800, 800,  800, 800, 800,  800,  800,  800,  800,  800, 800, 800 } \
+};
+const uint16_t high_threshold[MATRIX_ROWS][MATRIX_COLS] = {
+    { 650,  650,  650,  650,  650, 650,  650, 650, 650,  650,  650,  650,  650,  650, 650, 650 }, \
+    { 650,  650,  650,  650,  650, 650,  650, 650, 650,  650,  650,  650,  650,  650, 650, 650 }, \
+    { 650,  650,  650,  650,  650, 650,  650, 650, 650,  650,  650,  650,  650,  650, 650, 650 }, \
+    { 650,  650,  650,  650,  650, 650,  650, 650, 650,  650,  650,  650,  650,  650, 650, 650 }, \
+    { 650,  650,  650,  650,  650, 650,  650, 650, 650,  650,  650,  650,  650,  650, 650, 650 }, \
+    { 650,  650,  650,  650,  650, 650,  650, 650, 650,  650,  650,  650,  650,  650, 650, 650 } \
+};
 
 void matrix_init_custom(void) {
-    ecsm_config_t ecsm_config = {.low_threshold = LOW_THRESHOLD, .high_threshold = HIGH_THRESHOLD};
+    ecsm_config_t ecsm_config; // = {.low_threshold_matrix = LOW_THRESHOLD, .high_threshold_matrix = HIGH_THRESHOLD};
+
+    for (uint8_t row = 0; row < MATRIX_ROWS; row++) {
+        for (uint8_t col = 0; col < MATRIX_COLS; col++) {
+            ecsm_config.low_threshold_matrix[row][col] = low_threshold[row][col];
+            ecsm_config.high_threshold_matrix[row][col] = high_threshold[row][col];
+        }
+    }
 
     ecsm_init(&ecsm_config);
 }

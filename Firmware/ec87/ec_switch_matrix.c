@@ -123,17 +123,17 @@ static uint16_t ecsm_readkey_raw(uint8_t channel, uint8_t row, uint8_t col) {
 }
 
 // Update press/release state of key at (row, col)
-static bool ecsm_update_key(matrix_row_t* current_row, uint8_t col, uint16_t sw_value) {
+static bool ecsm_update_key(matrix_row_t* current_row, uint8_t row, uint8_t col, uint16_t sw_value) {
     bool current_state = (*current_row >> col) & 1;
 
     // press to release
-    if (current_state && sw_value < config.low_threshold) {
+    if (current_state && sw_value < config.low_threshold_matrix[row][col]) {
         *current_row &= ~(1 << col);
         return true;
     }
 
     // release to press
-    if ((!current_state) && sw_value > config.high_threshold) {
+    if ((!current_state) && sw_value > config.high_threshold_matrix[row][col]) {
         *current_row |= (1 << col);
         return true;
     }
@@ -152,7 +152,7 @@ bool ecsm_matrix_scan(matrix_row_t current_matrix[]) {
     for (int col = 0; col < sizeof(col_channels); col++) {
         for (int row = 0; row < 6; row++) {
             ecsm_sw_value[row][col] = ecsm_readkey_raw(0, row, col);
-            updated |= ecsm_update_key(&current_matrix[row], col, ecsm_sw_value[row][col]);
+            updated |= ecsm_update_key(&current_matrix[row], row, col, ecsm_sw_value[row][col]);
         }
     }
 
@@ -164,7 +164,7 @@ bool ecsm_matrix_scan(matrix_row_t current_matrix[]) {
     for (int col = 0; col < sizeof(col_channels); col++) {
         for (int row = 0; row < 6; row++) {
             ecsm_sw_value[row][col + 8] = ecsm_readkey_raw(1, row, col);
-            updated |= ecsm_update_key(&current_matrix[row], col + 8, ecsm_sw_value[row][col + 8]);
+            updated |= ecsm_update_key(&current_matrix[row], row, col + 8, ecsm_sw_value[row][col + 8]);
         }
     }
     return updated;
