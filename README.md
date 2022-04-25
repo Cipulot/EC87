@@ -79,6 +79,12 @@ Features that will be included:
 
 - Dedicated PCBs for specific MX boards already being run.
 
+## WIP
+
+Implementation of APC and initial calibration is in development. This features will allow to choose from a set op predetermined actuation points by simply cycling through them using a key combination. The initial calibration is to ensure that the overall baseline reading is equal across all the keys. Later, in Rev2, this will be used to adjust hardware gain through dedicated control circuit.
+
+See commits in `Firmware` for details about teh state of development.
+
 ## Copyright notice
 
 This project is released under the MIT License. For the license, please refer to the LICENCE.md file.
