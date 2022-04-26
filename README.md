@@ -25,7 +25,7 @@ Multi layout support is planned for Rev2.
 
 ## Renders and Prototypes
 
-### EC87 PCB 
+### EC87 PCB
 
 #### Render
 
@@ -45,13 +45,19 @@ Multi layout support is planned for Rev2.
 
 ![EC87 Plate Render](/Docs/images/plate.jpg)
 
+#### Prototype
+
+![EC87 Plate Proto](/Docs/images/plate_PCB.jpg)
+
 ### Backplate
 
 #### Render
 
 ![EC87 Backplate Render](/Docs/images/backplate.jpg)
 
+#### Prototype
 
+![EC87 Backplate Proto](/Docs/images/backplate_PCB.jpg)
 
 ## Revisions and relative features
 
