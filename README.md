@@ -8,7 +8,7 @@ This project is a continuation of my development of open source EC boards after 
 
 Below is the KLE of the supported layout:
 
-![EC87 KLE](/Docs/images/EC87_KLE.jpg)
+![EC87 KLE](/Docs/images/EC87_KLE.png)
 
 Multi layout support is planned for Rev2.
 
