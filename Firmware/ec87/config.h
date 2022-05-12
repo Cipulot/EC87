@@ -28,6 +28,8 @@
 #define MATRIX_ROWS 6
 #define MATRIX_COLS 16
 
+#define LED_CAPS_LOCK_PIN A13
+
 //#define POWER_PIN B12
 #define APLEX_EN_PIN_0 A8
 #define APLEX_EN_PIN_1 B7
