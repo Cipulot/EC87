@@ -89,7 +89,7 @@ Features that will be included:
 
 Implementation of APC and initial calibration is in development. This features will allow to choose from a set op predetermined actuation points by simply cycling through them using a key combination. The initial calibration is to ensure that the overall baseline reading is equal across all the keys. Later, in Rev2, this will be used to adjust hardware gain through dedicated control circuit.
 
-See commits in `Firmware` for details about teh state of development.
+See commits in `Firmware` for details about the state of development.
 
 ## Copyright notice
 
