@@ -1,5 +1,11 @@
 # EC87
 
+## **DEPRECATED**
+This project has been deprecated in favor of the next TKL I'm working on. 
+It will not be updated nor maintained from now on, so do no base projects, them being PCB or cases, on it.
+The project of reference for EC TKL will be named (provisional for now, in search of a better name still): ECip TKL
+This new design will join the EC60 in the reference design family of PCBs that I'm working on. Think of these as the EC equivalent of the H87/88 and H60 for MX switches. An FRL will be developed too, to complete the general layouts. Both will feature the same key and cluster spacing as the H87/88 PCBs, so that future design of cases can have both MX and EC options without compromising compatibility or having to develop separate cases/parts of cases for it.
+
 ## Introduction
 
 EC87 is an Electrostatic Capacitive (EC) TKL keyboard PCB.
