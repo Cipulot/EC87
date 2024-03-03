@@ -1,7 +1,8 @@
 # EC87
 
 ## **DEPRECATED**
-This project has been deprecated in favor of the next TKL I'm working on. 
+
+This project has been deprecated in favor of the next TKL I'm working on.
 It will not be updated nor maintained from now on, so do no base projects, them being PCB or cases, on it.
 The project of reference for EC TKL will be named (provisional for now, in search of a better name still): ECip TKL
 This new design will join the EC60 in the reference design family of PCBs that I'm working on. Think of these as the EC equivalent of the H87/88 and H60 for MX switches. An FRL will be developed too, to complete the general layouts. Both will feature the same key and cluster spacing as the H87/88 PCBs, so that future design of cases can have both MX and EC options without compromising compatibility or having to develop separate cases/parts of cases for it.
@@ -26,8 +27,8 @@ Multi layout support is planned for Rev2.
 - Connector: detachable USB Type C
 - Firmware compatibility: QMK (with VIA/VIAL support)
 - Protection hardware:
-  * Fused
-  * ESD protection
+  - Fused
+  - ESD protection
 
 ## Renders and Prototypes
 
@@ -97,6 +98,6 @@ Implementation of APC and initial calibration is in development. This features w
 
 See commits in `Firmware` for details about the state of development.
 
-## Copyright notice
+## License
 
-This project is released under the MIT License. For the license, please refer to the LICENCE.md file.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
